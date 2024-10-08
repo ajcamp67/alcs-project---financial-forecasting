@@ -3,6 +3,7 @@ import numpy as np
 import customtkinter as ctk
 import yfinance as yf
 import matplotlib.pyplot as plt
+import quandl as qd
 
 # STOCK VARIABLES
 GSPC = ''
@@ -23,4 +24,6 @@ goldHistory = pd.DataFrame(goldHistory)
 # Create CSVs for financial instruments
 GSPC_history.to_csv('S&P500history.csv')
 goldHistory.to_csv('goldHistory.csv')
+
+
 
