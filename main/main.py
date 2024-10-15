@@ -31,4 +31,8 @@ MovingAverage = GSPC_history['Close'].rolling(4).mean()
 GSPC_history.insert(7, "Moving Average",value=MovingAverage)
 print(GSPC_history.tail(10))
 
-
+# Plot time series of Moving Average
+columns = list(GSPC_history.columns)
+print(columns)
+plt.plot(GSPC_history.index, GSPC_history['Moving Average'])
+plt.show()
