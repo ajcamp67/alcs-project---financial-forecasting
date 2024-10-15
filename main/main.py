@@ -25,5 +25,10 @@ goldHistory = pd.DataFrame(goldHistory)
 GSPC_history.to_csv('S&P500history.csv')
 goldHistory.to_csv('goldHistory.csv')
 
+# Create four point moving average for GSPC
+MovingAverage = GSPC_history['Close'].rolling(4).mean()
+### print(MovingAverage.tail())
+GSPC_history.insert(7, "Moving Average",value=MovingAverage)
+print(GSPC_history.tail(10))
 
 
